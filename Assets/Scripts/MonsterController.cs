@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using UnityEngine.UIElements;
 
 public class MonsterController : MonoBehaviour
 {
@@ -24,5 +20,17 @@ public class MonsterController : MonoBehaviour
         // moveSpeed만큼
         // 이동
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+            Debug.Log("충돌확인 : 몬스터");
+        // 총알과 충돌하였을 경우
+        if (collision.gameObject.tag == "Bullet")
+        {
+            // 몬스터 삭제
+            Debug.Log("총알 피격");
+            Destroy(gameObject);
+        }
     }
 }
