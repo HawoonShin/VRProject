@@ -1,7 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
+    private void Awake()
+    {
+        StartCoroutine(DestroyCoroutine());
+    }
+
     // 충돌하면 삭제
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,4 +22,10 @@ public class Bullets : MonoBehaviour
     }
 
     // 일정 시간 이후 자동 삭제
+    IEnumerator DestroyCoroutine()
+    {
+        Debug.Log("코루틴 시작");
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }
