@@ -10,15 +10,20 @@ public class GameManager : MonoBehaviour
     public bool isOver;
     public bool isDead;
 
+    [Header("UI")]
     [SerializeField] Canvas gameStartUI;
     [SerializeField] Canvas gameOverUI;
-
     [SerializeField] GameObject startButton;
     [SerializeField] GameObject restartButton;
+
+    [Header("GameObject")]
     [SerializeField] GameObject spawner;
     [SerializeField] GameObject deadLine;
+    // [SerializeField] GameObject monster;
 
-    [SerializeField] GameObject monster;
+    [Header("Audio")]
+    [SerializeField] AudioSource bgm;
+    [SerializeField] AudioSource gameOverSound;
 
     public void Start()
     {
@@ -29,6 +34,10 @@ public class GameManager : MonoBehaviour
         // 죽었니 살았니
         gameOverUI.enabled = false;
 
+        // 브금 실행
+        bgm.enabled = true;
+        // 오버 사운드 실행 안함
+        gameOverSound.enabled = false;
     }
 
     private void Update()
@@ -84,6 +93,11 @@ public class GameManager : MonoBehaviour
         gameOverUI.enabled = true;
         // 스포너 비활성화
         spawner.SetActive(false);
+
+        // 브금 종료
+        bgm.enabled = false;
+        // 오버사운드 출력
+        gameOverSound.enabled = true;
     }
 
 }
