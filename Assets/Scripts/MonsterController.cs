@@ -3,6 +3,8 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    // 플레이어 위치
+    // [SerializeField] GameObject target;
 
     private void Awake()
     {
@@ -20,11 +22,13 @@ public class MonsterController : MonoBehaviour
         // moveSpeed만큼
         // 이동
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        // 플레이어의 위치로 걸어옵니다
+        //  transform.position = Vector3.MoveTowards(transform.forward,target.transform.position,moveSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-            Debug.Log("충돌확인 : 몬스터");
+        Debug.Log("충돌확인 : 몬스터");
         // 총알과 충돌하였을 경우
         if (collision.gameObject.tag == "Bullet")
         {
