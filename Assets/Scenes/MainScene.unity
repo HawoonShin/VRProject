@@ -3935,7 +3935,8 @@ MonoBehaviour:
   restartButton: {fileID: 499871221}
   spawner: {fileID: 22989657}
   deadLine: {fileID: 1827379786}
-  monster: {fileID: 0}
+  bgm: {fileID: 1721108163}
+  gameOverSound: {fileID: 1559364467}
 --- !u!4 &732609405
 Transform:
   m_ObjectHideFlags: 0
