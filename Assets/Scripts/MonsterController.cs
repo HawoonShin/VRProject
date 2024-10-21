@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MonsterController : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class MonsterController : MonoBehaviour
 
     private void Awake()
     {
-        // 후에 스폰했을 때 주인공 방향으로 걸어간다.
+        StartCoroutine(DestroyCoroutine());
     }
 
     private void Update()
@@ -18,12 +19,8 @@ public class MonsterController : MonoBehaviour
 
     public void Move()
     {
-        // 앞방향으로
-        // moveSpeed만큼
         // 이동
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        // 플레이어의 위치로 걸어옵니다
-        //  transform.position = Vector3.MoveTowards(transform.forward,target.transform.position,moveSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,5 +33,13 @@ public class MonsterController : MonoBehaviour
             Debug.Log("총알 피격");
             Destroy(gameObject);
         }
+    }
+
+    // 일정 시간 이후 자동 삭제
+    IEnumerator DestroyCoroutine()
+    {
+        Debug.Log("몬스터 코루틴 시작");
+        yield return new WaitForSeconds(20f);
+        Destroy(gameObject);
     }
 }
