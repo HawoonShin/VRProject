@@ -2134,7 +2134,7 @@ Animator:
   m_GameObject: {fileID: 3335332093970606656}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ffdfcb810f2918b4f8fe9f917f07bc78, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13573539c3cbe034baa0f581942cf383, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2158,7 +2158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  target: {fileID: 0}
 --- !u!54 &4859513199969831892
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2173,7 +2172,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &962389217823163904
 BoxCollider:

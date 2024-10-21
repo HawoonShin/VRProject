@@ -295,7 +295,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1818883753}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &26617221 stripped
 Transform:
@@ -2833,7 +2833,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fdf00ae655c6f9d4abac02c38bd47b3e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fdf00ae655c6f9d4abac02c38bd47b3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3902,6 +3902,7 @@ MonoBehaviour:
   restartButton: {fileID: 499871221}
   spawner: {fileID: 22989657}
   deadLine: {fileID: 1827379786}
+  monster: {fileID: 0}
 --- !u!4 &732609405
 Transform:
   m_ObjectHideFlags: 0
@@ -8320,8 +8321,8 @@ Transform:
   m_Children:
   - {fileID: 337918843}
   - {fileID: 91407004}
-  - {fileID: 514211672}
   - {fileID: 22989659}
+  - {fileID: 514211672}
   - {fileID: 1029904367}
   m_Father: {fileID: 0}
   m_RootOrder: 4
