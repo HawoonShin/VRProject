@@ -34,6 +34,8 @@ public class DeadLine : MonoBehaviour
                 Debug.Log("충돌체 태그 몬스터");
                 // 게임 오버 상태로 변경
                 isDead = true;
+                // 몬스터 제거
+                Destroy(hit.collider.gameObject);
             }
         }
     }

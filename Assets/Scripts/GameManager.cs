@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public bool isOver;
     public bool isDead;
 
+    // 점수
+    public float score;
+
     [Header("UI")]
     [SerializeField] Canvas gameStartUI;
     [SerializeField] Canvas gameOverUI;
@@ -38,6 +41,9 @@ public class GameManager : MonoBehaviour
         bgm.enabled = true;
         // 오버 사운드 실행 안함
         gameOverSound.enabled = false;
+
+        // 초기 점수
+        score = 0;  
     }
 
     private void Update()

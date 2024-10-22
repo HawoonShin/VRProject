@@ -39,7 +39,7 @@ public class MonsterController : MonoBehaviour
     IEnumerator DestroyCoroutine()
     {
         Debug.Log("몬스터 코루틴 시작");
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(10f);
         Destroy(gameObject);
     }
 }

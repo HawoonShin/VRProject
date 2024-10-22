@@ -25,7 +25,7 @@ public class Bullets : MonoBehaviour
     IEnumerator DestroyCoroutine()
     {
         Debug.Log("코루틴 시작");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         Destroy(gameObject);
     }
 }
